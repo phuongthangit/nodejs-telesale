@@ -1,0 +1,9 @@
+#main{
+    padding-top: 0;
+}
+.navbar{
+    background-color: aliceblue;
+}
+.widget-todo-item{
+    list-style: none;
+}
