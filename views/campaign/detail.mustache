@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+</head>
+
+<body>
+    <div id="app">
+        {{>slidebar}}
+        <div id="main">
+            {{>nav}}
+            <div class="page-title">
+                <div class="row">
+                    <div class="col-12 col-md-6 order-md-1 order-last">
+                        <h3>Chi tiết chiến dịch</h3>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-2 order-first">
+                        <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Chi tiết chiến dịch</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="campaign-info">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h6>Chiến dịch</h6>
+                        <div class="form-group position-relative has-icon-right">
+                            <input type="text" class="form-control" placeholder="Backend NodeJs">
+                            <div class="form-control-icon">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h6>Slug</h6>
+                        <div class="form-group position-relative has-icon-right">
+                            <input type="text" class="form-control" placeholder="Node-js">
+                            <div class="form-control-icon">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h6>Người phụ trách</h6>
+                        <div class="form-group position-relative has-icon-right">
+                            <input type="text" class="form-control" placeholder="Phương Công Thắng">
+                            <div class="form-control-icon">
+                                <i class="fa fa-user-astronaut"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h6>Ngày bắt đầu</h6>
+                        <div class="form-group position-relative">
+                            <div class="form-group">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h6>Ngày bắt đầu</h6>
+                        <div class="form-group position-relative">
+                            <div class="form-group">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h6>Thưởng</h6>
+                        <div class="form-group position-relative has-icon-right">
+                            <input type="text" class="form-control" placeholder="100.000 đ">
+                            <div class="form-control-icon">
+                                <i class="fa fa-money-bill-wave-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <section class="section">
+                <div class="card">
+                    <div class="card-header">
+                        Dữ liệu chiến dịch
+                    </div>
+                    <div class="card-body text-center">
+                        <table class="table table-striped" id="table1">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">STT</th>
+                                    <th class="text-center">Họ tên</th>
+                                    <th class="text-center">Số điện thoại</th>
+                                    <th class="text-center">Địa chỉ</th>
+                                    <th class="text-center">Trạng thái</th>
+                                    <th class="text-center">Lịch sử</th>
+                                    <th class="text-center">Gọi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Phương Công Thắng</td>
+                                    <td>0344771283</td>
+                                    <td>Hà Nội</td>
+                                    <td><button class="btn btn-sm btn-danger">Chưa gọi</button></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-danger"><i class="fa fa-history"></i> Chi
+                                            tiết</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                            data-bs-target="#xlarge"><i class="fa fa-phone-alt"></i>
+                                            Gọi</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Nguyễn Thị Chinh</td>
+                                    <td>0344771283</td>
+                                    <td>Bắc Giang</td>
+                                    <td><button class="btn btn-sm btn-danger">Chưa gọi</button></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-danger"><i class="fa fa-history"></i> Chi
+                                            tiết</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                            data-bs-target="#xlarge"><i class="fa fa-phone-alt"></i> Gọi</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal fade text-left w-100" id="xlarge" tabindex="-1" role="dialog"
+                    aria-labelledby="myModalLabel16" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel16">Cập nhật thông tin cuộc gọi</h4>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <i data-feather="x"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h6>Trạng thái cuộc gọi</h6>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-check form-control" style="border: none;">
+                                            <input class="form-check-input" type="radio" name="gender" id="male"
+                                                checked>
+                                            <label class="form-check-label" for="male">
+                                                Thành công
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-check form-control" style="border: none;">
+                                            <input class="form-check-input" type="radio" name="gender" id="female">
+                                            <label class="form-check-label" for="female">
+                                                Không liên lạc được
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-check form-control" style="border: none;">
+                                            <input class="form-check-input" type="radio" name="gender" id="other">
+                                            <label class="form-check-label" for="other">
+                                                Hẹn
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="customer-info">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <h6>Họ tên</h6>
+                                            <div class="form-group position-relative has-icon-right">
+                                                <input type="text" class="form-control" placeholder="Backend NodeJs">
+                                                <div class="form-control-icon">
+                                                    <i class="fa fa-rocket"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h6>Số điện thoại</h6>
+                                            <div class="form-group position-relative has-icon-right">
+                                                <input type="text" class="form-control" placeholder="Backend NodeJs">
+                                                <div class="form-control-icon">
+                                                    <i class="fa fa-rocket"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h6>Email</h6>
+                                            <div class="form-group position-relative has-icon-right">
+                                                <input type="text" class="form-control" placeholder="Backend NodeJs">
+                                                <div class="form-control-icon">
+                                                    <i class="fa fa-rocket"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <h6>Thời gian</h6>
+                                            <div class="form-group position-relative">
+                                                <div class="form-group">
+                                                    <input type="datetime-local" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h6>Số điện thoại</h6>
+                                            <div class="form-group position-relative has-icon-right">
+                                                <input type="text" class="form-control" placeholder="Backend NodeJs">
+                                                <div class="form-control-icon">
+                                                    <i class="fa fa-rocket"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h6>Email</h6>
+                                            <div class="form-group position-relative has-icon-right">
+                                                <input type="text" class="form-control" placeholder="Backend NodeJs">
+                                                <div class="form-control-icon">
+                                                    <i class="fa fa-rocket"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h6>Lịch sử cuộc gọi</h6>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="miss-contact">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <h6>Thời gian</h6>
+                                            <div class="form-group position-relative">
+                                                <div class="form-group">
+                                                    <input type="datetime-local" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <h6>Lịch sử cuộc gọi</h6>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                    <i class="bx bx-x d-block d-sm-none"></i>
+                                    <span class="d-none d-sm-block">Đóng</span>
+                                </button>
+                                <button type="button" class="btn btn-success ml-1" data-bs-dismiss="modal">
+                                    <i class="bx bx-check d-block d-sm-none"></i>
+                                    <span class="d-none d-sm-block">Cập nhật</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {{>footer}}
+        </div>
+    </div>
+    {{>script}}
+</body>
+
+</html>
