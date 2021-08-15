@@ -88,7 +88,7 @@
             <section class="section">
                 <div class="card">
                     <div class="card-header">
-                        Dữ liệu chiến dịch
+                        Danh sách cuộc hẹn
                     </div>
                     <div class="card-body text-center">
                         <table class="table table-striped" id="table1">
@@ -98,7 +98,7 @@
                                     <th class="text-center">Họ tên</th>
                                     <th class="text-center">Số điện thoại</th>
                                     <th class="text-center">Địa chỉ</th>
-                                    <th class="text-center">Trạng thái</th>
+                                    <th class="text-center">Thời gian</th>
                                     <th class="text-center">Lịch sử</th>
                                     <th class="text-center">Gọi</th>
                                 </tr>
@@ -109,7 +109,7 @@
                                     <td>Phương Công Thắng</td>
                                     <td>0344771283</td>
                                     <td>Hà Nội</td>
-                                    <td><button class="btn btn-sm btn-danger">Chưa gọi</button></td>
+                                    <td>25/07/2021 20:00</td>
                                     <td>
                                         <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
                                         data-bs-target="#history"><i class="fa fa-history"></i> Chi
@@ -126,7 +126,7 @@
                                     <td>Nguyễn Thị Chinh</td>
                                     <td>0344771283</td>
                                     <td>Bắc Giang</td>
-                                    <td><button class="btn btn-sm btn-danger">Chưa gọi</button></td>
+                                    <td>25/07/2021 20:00</td>
                                     <td>
                                         <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
                                         data-bs-target="#history"><i class="fa fa-history"></i> Chi
@@ -280,35 +280,38 @@
                     </div>
                 </div>
                 <!--Default size Modal -->
-                <div class="modal fade text-left" id="history" tabindex="-1" role="dialog"
-                    aria-labelledby="myModalLabel18" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel18">Lịch sử cuộc gọi
-                                </h4>
-                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                    <i data-feather="x"></i>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                I love candy candy cake powder I love icing ice cream
-                                pastry. Biscuit
-                                lemon drops sesame
-                                snaps. Topping biscuit croissant gummi bears jelly beans
-                                cake cake bear
-                                claw muffin. Lemon
-                                drops oat cake pastry bear claw liquorice lemon drops.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                    <i class="bx bx-x d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Đóng</span>
-                                </button>
-                            </div>
+                <div class="modal fade text-left" id="history" tabindex="-1"
+                role="dialog" aria-labelledby="myModalLabel18" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                    role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel18">Lịch sử cuộc gọi
+                            </h4>
+                            <button type="button" class="close" data-bs-dismiss="modal"
+                                aria-label="Close">
+                                <i data-feather="x"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            I love candy candy cake powder I love icing ice cream
+                            pastry. Biscuit
+                            lemon drops sesame
+                            snaps. Topping biscuit croissant gummi bears jelly beans
+                            cake cake bear
+                            claw muffin. Lemon
+                            drops oat cake pastry bear claw liquorice lemon drops.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light-secondary"
+                                data-bs-dismiss="modal">
+                                <i class="bx bx-x d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block">Đóng</span>
+                            </button>
                         </div>
                     </div>
                 </div>
+            </div>
             </section>
 
             {{>footer}}

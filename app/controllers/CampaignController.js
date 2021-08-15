@@ -30,5 +30,21 @@ class CampaignController{
         };
         res.render('campaign/detail',data);
     }
+
+    //GET /campaign/slug/list/missed
+    listMissed(req, res, next){
+        const data = {
+            title: 'Danh sách cuộc hẹn',
+        };
+        res.render('campaign/list_missed',data);
+    }
+
+    //GET /campaign/slug/list/missed
+    listSucess(req, res, next){
+        const data = {
+            title: 'Danh sách cuộc phỏng vấn',
+        };
+        res.render('campaign/list_success',data);
+    }
 };
 module.exports = new CampaignController;

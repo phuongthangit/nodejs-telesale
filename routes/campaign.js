@@ -5,6 +5,8 @@ const LinkName = require('../constants/linkName');
 
 router.get(LinkName.CREATE,campaignController.create);
 router.get('/:slug/detail',campaignController.detail);
+router.get('/:slug/list/missed',campaignController.listMissed);
+router.get('/:slug/list/success',campaignController.listSucess);
 router.get('/:id',campaignController.edit);
 router.get('/',campaignController.index);
 
